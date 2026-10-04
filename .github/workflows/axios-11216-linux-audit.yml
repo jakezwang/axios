@@ -2,7 +2,7 @@ name: Axios 11216 Ubuntu candidate validation
 
 on:
   push:
-    branches: [audit/axios-11216-ubuntu-20261003]
+    branches: [audit/axios-11216-ubuntu-20261004]
 
 permissions:
   contents: read
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout exact candidate
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          ref: 392762b22fa3d6af143b42f025c3128da436bdf0
+          ref: 6749916326f83b5c8a4efdbb36f80a1c265d2a7a
           persist-credentials: false
       - name: Verify candidate commit
-        run: test "$(git rev-parse HEAD)" = 392762b22fa3d6af143b42f025c3128da436bdf0
+        run: test "$(git rev-parse HEAD)" = 6749916326f83b5c8a4efdbb36f80a1c265d2a7a
       - name: Setup Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
